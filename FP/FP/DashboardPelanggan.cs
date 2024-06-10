@@ -10,5 +10,6 @@ namespace FP
     {
         private string nama;
         private string noHp;
+        private string alamat;
     }
 }
