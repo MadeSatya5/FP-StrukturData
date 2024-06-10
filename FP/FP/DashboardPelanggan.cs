@@ -9,5 +9,6 @@ namespace FP
     public class DashboardPelanggan
     {
         private string nama;
+        private string noHp;
     }
 }
