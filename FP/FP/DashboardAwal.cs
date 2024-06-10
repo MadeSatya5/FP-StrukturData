@@ -45,11 +45,13 @@ namespace FP
                 
                 if(akun.searchMasukPelanggan(Username, Password))
                 {
-                    Console.WriteLine("Berhasil Masuk");
+                    Console.WriteLine("Berhasil Masuk!!");
+                    DashboardPelanggan.MainMenu();
                 }
                 else
                 {
-                    Console.WriteLine("Gagal Masuk");
+                    Console.WriteLine("Gagal Masuk!! Username atau Password salah!!");
+                    Masuk();
                 }
 
             }
