@@ -52,7 +52,22 @@ namespace FP
                     Console.WriteLine("Gagal Masuk");
                 }
 
-            } 
+            }
+            if(pilihan == "2")
+            {
+                Console.WriteLine("Masukkan Username :");
+                string Username = Console.ReadLine();
+                Console.WriteLine("Masukkan Password :");
+                string Password = Console.ReadLine();
+                if (Username == "user")
+                {
+                    Console.WriteLine("Berhasil Masuk");
+                }
+                else
+                {
+                    Console.WriteLine("Gagal Masuk");
+                }
+            }
         }
     }
 }
