@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Kuliah\\Semester-2\\Struktur_Data\\FInalProject\\GithubFP\\FP-StrukturData\\FP\\",
+  "WorkspaceRootPath": "D:\\ITS\\Semester 2\\Struktur Data\\Final Project\\New Refrence\\FP-StrukturData\\FP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|d:\\kuliah\\semester-2\\struktur_data\\finalproject\\githubfp\\fp-strukturdata\\fp\\fp\\dashboardpelanggan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|solutionrelative:fp\\dashboardpelanggan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|d:\\its\\semester 2\\struktur data\\final project\\new refrence\\fp-strukturdata\\fp\\fp\\dashboardawal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|solutionrelative:fp\\dashboardawal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|d:\\kuliah\\semester-2\\struktur_data\\finalproject\\githubfp\\fp-strukturdata\\fp\\fp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|d:\\its\\semester 2\\struktur data\\final project\\new refrence\\fp-strukturdata\\fp\\fp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|solutionrelative:fp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|d:\\kuliah\\semester-2\\struktur_data\\finalproject\\githubfp\\fp-strukturdata\\fp\\fp\\hash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|d:\\its\\semester 2\\struktur data\\final project\\new refrence\\fp-strukturdata\\fp\\fp\\hash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|solutionrelative:fp\\hash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|d:\\kuliah\\semester-2\\struktur_data\\finalproject\\githubfp\\fp-strukturdata\\fp\\fp\\dashboardawal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|solutionrelative:fp\\dashboardawal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|d:\\its\\semester 2\\struktur data\\final project\\new refrence\\fp-strukturdata\\fp\\fp\\dashboardpelanggan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|solutionrelative:fp\\dashboardpelanggan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|d:\\its\\semester 2\\struktur data\\final project\\new refrence\\fp-strukturdata\\fp\\fp\\dashboardadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668A5F72-CB62-49D2-AF92-F442EC619D3F}|FP\\FP.csproj|solutionrelative:fp\\dashboardadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,26 +38,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "DashboardAdmin.cs",
+              "DocumentMoniker": "D:\\ITS\\Semester 2\\Struktur Data\\Final Project\\New Refrence\\FP-StrukturData\\FP\\FP\\DashboardAdmin.cs",
+              "RelativeDocumentMoniker": "FP\\DashboardAdmin.cs",
+              "ToolTip": "D:\\ITS\\Semester 2\\Struktur Data\\Final Project\\New Refrence\\FP-StrukturData\\FP\\FP\\DashboardAdmin.cs",
+              "RelativeToolTip": "FP\\DashboardAdmin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T06:32:20.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DashboardPelanggan.cs",
-              "DocumentMoniker": "D:\\Kuliah\\Semester-2\\Struktur_Data\\FInalProject\\GithubFP\\FP-StrukturData\\FP\\FP\\DashboardPelanggan.cs",
+              "DocumentMoniker": "D:\\ITS\\Semester 2\\Struktur Data\\Final Project\\New Refrence\\FP-StrukturData\\FP\\FP\\DashboardPelanggan.cs",
               "RelativeDocumentMoniker": "FP\\DashboardPelanggan.cs",
-              "ToolTip": "D:\\Kuliah\\Semester-2\\Struktur_Data\\FInalProject\\GithubFP\\FP-StrukturData\\FP\\FP\\DashboardPelanggan.cs",
+              "ToolTip": "D:\\ITS\\Semester 2\\Struktur Data\\Final Project\\New Refrence\\FP-StrukturData\\FP\\FP\\DashboardPelanggan.cs",
               "RelativeToolTip": "FP\\DashboardPelanggan.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAzwCgAAAAmAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T05:27:42.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "DashboardAwal.cs",
-              "DocumentMoniker": "D:\\Kuliah\\Semester-2\\Struktur_Data\\FInalProject\\GithubFP\\FP-StrukturData\\FP\\FP\\DashboardAwal.cs",
+              "DocumentMoniker": "D:\\ITS\\Semester 2\\Struktur Data\\Final Project\\New Refrence\\FP-StrukturData\\FP\\FP\\DashboardAwal.cs",
               "RelativeDocumentMoniker": "FP\\DashboardAwal.cs",
-              "ToolTip": "D:\\Kuliah\\Semester-2\\Struktur_Data\\FInalProject\\GithubFP\\FP-StrukturData\\FP\\FP\\DashboardAwal.cs",
+              "ToolTip": "D:\\ITS\\Semester 2\\Struktur Data\\Final Project\\New Refrence\\FP-StrukturData\\FP\\FP\\DashboardAwal.cs",
               "RelativeToolTip": "FP\\DashboardAwal.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAYwDUAAAAcAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwCoAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T05:02:06.585Z",
               "EditorCaption": ""
@@ -62,11 +79,11 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Hash.cs",
-              "DocumentMoniker": "D:\\Kuliah\\Semester-2\\Struktur_Data\\FInalProject\\GithubFP\\FP-StrukturData\\FP\\FP\\Hash.cs",
+              "DocumentMoniker": "D:\\ITS\\Semester 2\\Struktur Data\\Final Project\\New Refrence\\FP-StrukturData\\FP\\FP\\Hash.cs",
               "RelativeDocumentMoniker": "FP\\Hash.cs",
-              "ToolTip": "D:\\Kuliah\\Semester-2\\Struktur_Data\\FInalProject\\GithubFP\\FP-StrukturData\\FP\\FP\\Hash.cs",
+              "ToolTip": "D:\\ITS\\Semester 2\\Struktur Data\\Final Project\\New Refrence\\FP-StrukturData\\FP\\FP\\Hash.cs",
               "RelativeToolTip": "FP\\Hash.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAzwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T04:59:15.514Z",
               "EditorCaption": ""
@@ -75,11 +92,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Kuliah\\Semester-2\\Struktur_Data\\FInalProject\\GithubFP\\FP-StrukturData\\FP\\FP\\Program.cs",
+              "DocumentMoniker": "D:\\ITS\\Semester 2\\Struktur Data\\Final Project\\New Refrence\\FP-StrukturData\\FP\\FP\\Program.cs",
               "RelativeDocumentMoniker": "FP\\Program.cs",
-              "ToolTip": "D:\\Kuliah\\Semester-2\\Struktur_Data\\FInalProject\\GithubFP\\FP-StrukturData\\FP\\FP\\Program.cs",
+              "ToolTip": "D:\\ITS\\Semester 2\\Struktur Data\\Final Project\\New Refrence\\FP-StrukturData\\FP\\FP\\Program.cs",
               "RelativeToolTip": "FP\\Program.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T04:58:53.462Z",
               "EditorCaption": ""
