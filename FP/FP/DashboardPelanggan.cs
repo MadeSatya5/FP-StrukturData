@@ -8,5 +8,6 @@ namespace FP
 {
     public class DashboardPelanggan
     {
+        private string nama;
     }
 }
