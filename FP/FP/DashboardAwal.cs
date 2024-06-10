@@ -56,16 +56,16 @@ namespace FP
             if(pilihan == "2")
             {
                 Console.WriteLine("Masukkan Username :");
-                string Username = Console.ReadLine();
+                string UsernameAdmin = Console.ReadLine();
                 Console.WriteLine("Masukkan Password :");
-                string Password = Console.ReadLine();
-                if (Username == "user")
+                string PasswordAdmin = Console.ReadLine();
+                if (UsernameAdmin == "user" && PasswordAdmin == "user")
                 {
                     Console.WriteLine("Berhasil Masuk");
                 }
                 else
                 {
-                    Console.WriteLine("Gagal Masuk");
+                    Console.WriteLine(" Username / Password salah");
                 }
             }
         }
