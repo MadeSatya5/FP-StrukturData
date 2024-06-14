@@ -1,14 +1,18 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
+
 
 namespace FP
 {
     public class DashboardAdmin
     {
         private Hash hash;
+        private LinkedlistTambahMotor.Garasi garasi;
 
         public DashboardAdmin(Hash hash)
         {
             this.hash = hash;
+            this.garasi = new LinkedlistTambahMotor.Garasi();
         }
 
         // Menampilkan akun-akun pelanggan yang terdaftar (fitur Admin)
@@ -38,14 +42,45 @@ namespace FP
                 Console.WriteLine();
                 Console.WriteLine($"Akun yang terdaftar : {jumlahAkun}");
             }
+
+        }
+        public void TampilkanMotor()
+        {
+            LinkedlistTambahMotor.MotorNode current = garasi.Head;
+            string hasil = "";
+
+            while (current != null)
+            {
+                hasil += $"Merk : {current.Data.Merk}\nNomor Polisi : {current.Data.NomorPolisi}\nHarga : {current.Data.Harga}\n";
+                current = current.Next;
+            }
+            Console.WriteLine(hasil);
+            TampilkanMenuAdmin();
+        }
+
+        // Menambahkan Motor (fitur admin)
+        public void TambahkanMotor()
+        {
+            Console.Write("Masukkan Merk Motor: ");
+            string merk = Console.ReadLine();
+            Console.Write("Masukkan Nomor Polisi: ");
+            string nomorPolisi = Console.ReadLine();
+            Console.Write("Masukkan Harga Sewa: ");
+            double harga = Convert.ToDouble(Console.ReadLine());
+
+            LinkedlistTambahMotor.Motor motor = new LinkedlistTambahMotor.Motor(merk, nomorPolisi, harga);
+            garasi.TambahMotor(motor);
+
+            Console.WriteLine("Motor berhasil ditambahkan ke garasi.\n");
+            TampilkanMenuAdmin();
         }
 
         public void TampilkanMenuAdmin()
         {
             Console.WriteLine("== Menu Admin ==");
             Console.WriteLine("1. Lihat Daftar Akun");
-            Console.WriteLine("2. Lihat Daftar Motor");
-            Console.WriteLine("3. Hapus Akun");
+            Console.WriteLine("2. Hapus Akun");
+            Console.WriteLine("3. Lihat Daftar Motor");
             Console.WriteLine("4. Tambahkan Motor");
             Console.WriteLine("5. Kembalikan Motor");
             Console.WriteLine("6. Lihat Motor Yang Dipinjam");
@@ -58,24 +93,19 @@ namespace FP
                 TampilAkunAdmin();
                 TampilkanMenuAdmin();
             }
-        }
-
-        // Metode untuk menambahkan akun baru
-        public void TambahAkun()
-        {
-            Console.Write("Masukkan Username: ");
-            string username = Console.ReadLine();
-            Console.Write("Masukkan Password: ");
-            string password = Console.ReadLine();
-
-            if (hash.CekDaftar(username, password))
+            else if(pilihan  == "2")
             {
-                Console.WriteLine("Akun berhasil ditambahkan.");
+                Console.WriteLine("p");
             }
-            else
+            else if(pilihan == "3") 
             {
-                Console.WriteLine("Penambahan akun gagal. Hash table mungkin penuh atau username sudah ada.");
+                TampilkanMotor();
+            }
+            else if(pilihan == "4")
+            {
+                TambahkanMotor();
             }
         }
+
     }
 }

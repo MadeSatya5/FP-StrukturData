@@ -14,9 +14,8 @@ namespace FP
             Console.WriteLine("1. Lihat Daftar Motor");
             Console.WriteLine("2. Sewa Motor");
             Console.WriteLine("3. Kembalikan Motor");
-            Console.WriteLine("4. Motor yang dipinjam");
-            Console.WriteLine("5. Keluar");
-            Console.WriteLine("Masukkan pilihan [1/2/3/4/5]");
+            Console.WriteLine("4. Keluar");
+            Console.WriteLine("Masukkan pilihan [1/2/3/4]");
 
             string input = Console.ReadLine();
 
@@ -33,10 +32,6 @@ namespace FP
                 Console.WriteLine("Menu Kembalikan Motor");
             }
             else if(input == "4")
-            {
-                Console.WriteLine("Menu motor yang dipinjam");
-            }
-            else if(input == "5")
             {
                 DashboardAwal.Masuk();
             }
