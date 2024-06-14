@@ -25,7 +25,7 @@ namespace FP
         private HashTableEntry[] akun;
         private int size = 10;
 
-        public Hash() 
+        public Hash()
         {
             akun = new HashTableEntry[size];
         }
@@ -39,7 +39,7 @@ namespace FP
             }
             return hash % size;
         }
-        
+
         public bool CekDaftar(string username, string password)
         {
             int index = GetHash(username);
@@ -49,7 +49,7 @@ namespace FP
             while (akun[index] != null && akun[index].Username != username)
             {
                 index = (index + 1) % size;
-                if(index == originalIndex)
+                if (index == originalIndex)
                 {
                     return false;
                 }
@@ -61,12 +61,12 @@ namespace FP
             }
             return foundEmptySlot;
         }
-        
+
         public bool searchMasukPelanggan(string username, string password)
         {
             int i = 0;
 
-            while(i < size)
+            while (i < size)
             {
                 if (akun[i] != null)
                 {
