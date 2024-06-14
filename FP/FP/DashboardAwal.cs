@@ -10,6 +10,7 @@ namespace FP
     public class DashboardAwal
     {
         public static Hash akun = new Hash();
+        public static DashboardAdmin da = new DashboardAdmin();
         public static void Daftar()
         {
             Console.WriteLine("==== Menu Daftar ====");
@@ -63,7 +64,7 @@ namespace FP
                 string PasswordAdmin = Console.ReadLine();
                 if (UsernameAdmin == "user" && PasswordAdmin == "user")
                 {
-                    Console.WriteLine("Berhasil Masuk");
+                    da.TampilkanMenuAdmin();
                 }
                 else
                 {

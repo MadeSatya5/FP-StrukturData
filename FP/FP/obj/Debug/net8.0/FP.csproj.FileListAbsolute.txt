@@ -41,3 +41,18 @@ D:\Kuliah\Semester-2\Struktur_Data\FInalProject\GithubFP\FP-StrukturData\FP\FP\o
 D:\Kuliah\Semester-2\Struktur_Data\FInalProject\GithubFP\FP-StrukturData\FP\FP\obj\Debug\net8.0\FP.pdb
 D:\Kuliah\Semester-2\Struktur_Data\FInalProject\GithubFP\FP-StrukturData\FP\FP\obj\Debug\net8.0\FP.genruntimeconfig.cache
 D:\Kuliah\Semester-2\Struktur_Data\FInalProject\GithubFP\FP-StrukturData\FP\FP\obj\Debug\net8.0\ref\FP.dll
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\bin\Debug\net8.0\FP.exe
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\bin\Debug\net8.0\FP.deps.json
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\bin\Debug\net8.0\FP.runtimeconfig.json
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\bin\Debug\net8.0\FP.dll
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\bin\Debug\net8.0\FP.pdb
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\obj\Debug\net8.0\FP.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\obj\Debug\net8.0\FP.AssemblyInfoInputs.cache
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\obj\Debug\net8.0\FP.AssemblyInfo.cs
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\obj\Debug\net8.0\FP.csproj.CoreCompileInputs.cache
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\obj\Debug\net8.0\FP.sourcelink.json
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\obj\Debug\net8.0\FP.dll
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\obj\Debug\net8.0\refint\FP.dll
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\obj\Debug\net8.0\FP.pdb
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\obj\Debug\net8.0\FP.genruntimeconfig.cache
+D:\ITS\Semester 2\Struktur Data\Final Project\New Refrence\FP-StrukturData\FP\FP\obj\Debug\net8.0\ref\FP.dll
