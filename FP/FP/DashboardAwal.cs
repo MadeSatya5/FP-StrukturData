@@ -10,7 +10,7 @@ namespace FP
     public class DashboardAwal
     {
         public static Hash akun = new Hash();
-        public static DashboardAdmin da = new DashboardAdmin();
+        public static DashboardAdmin da = new DashboardAdmin(akun);
         public static void Daftar()
         {
             Console.WriteLine("==== Menu Daftar ====");

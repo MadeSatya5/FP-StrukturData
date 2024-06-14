@@ -1,21 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FP
 {
     public class DashboardAdmin
     {
         private Hash hash;
-        private HashTableEntry[] akun;
 
+        public DashboardAdmin(Hash hash)
+        {
+            this.hash = hash;
+        }
 
-        //menampilan akun-akun pelanggan yang terdaftar (fitur Admin)
+        // Menampilkan akun-akun pelanggan yang terdaftar (fitur Admin)
         public void TampilAkunAdmin(int i = 0, int jumlahAkun = 0)
         {
+            HashTableEntry[] akun = hash.GetAllAccounts();
+
             if (i < akun.Length)
             {
                 Console.WriteLine("===============================");
@@ -32,7 +32,8 @@ namespace FP
                 }
                 TampilAkunAdmin(i + 1, jumlahAkun);
             }
-            else // Jika sudah mencapai panjang array
+
+            if (i == akun.Length - 1)
             {
                 Console.WriteLine();
                 Console.WriteLine($"Akun yang terdaftar : {jumlahAkun}");
@@ -56,6 +57,24 @@ namespace FP
             {
                 TampilAkunAdmin();
                 TampilkanMenuAdmin();
+            }
+        }
+
+        // Metode untuk menambahkan akun baru
+        public void TambahAkun()
+        {
+            Console.Write("Masukkan Username: ");
+            string username = Console.ReadLine();
+            Console.Write("Masukkan Password: ");
+            string password = Console.ReadLine();
+
+            if (hash.CekDaftar(username, password))
+            {
+                Console.WriteLine("Akun berhasil ditambahkan.");
+            }
+            else
+            {
+                Console.WriteLine("Penambahan akun gagal. Hash table mungkin penuh atau username sudah ada.");
             }
         }
     }

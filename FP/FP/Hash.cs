@@ -19,11 +19,11 @@ namespace FP
             this.Password = password;
         }
     }
-
+    
     public class Hash
     {
         private HashTableEntry[] akun;
-        private int size = 10;
+        private int size = 100;
 
         public Hash()
         {
@@ -79,5 +79,11 @@ namespace FP
             }
             return false;
         }
+
+        public HashTableEntry[] GetAllAccounts()
+        {
+            return akun;
+        }
+
     }
 }
