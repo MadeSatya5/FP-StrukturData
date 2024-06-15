@@ -8,16 +8,16 @@ namespace FP
 {
     public class DashboardPelanggan
     {
-        private LinkedlistTambahMotor.Garasi garasi;
+        private LinkedlistMotor.Garasi garasi;
 
-        public DashboardPelanggan(LinkedlistTambahMotor.Garasi garasi)
+        public DashboardPelanggan(LinkedlistMotor.Garasi garasi)
         {
             this.garasi = garasi;
         }
         // Lihat Daftar Motor (fitur pelanggan)
         public void LihatDaftarMotor()
         {
-            LinkedlistTambahMotor.MotorNode current = garasi.Head;
+            LinkedlistMotor.MotorNode current = garasi.Head;
             Console.WriteLine("\n===== Daftar Motor =====");
             string hasil = "";
             if(current == null) 
@@ -39,8 +39,8 @@ namespace FP
 
         public void SewaMotor()
         {
-            LinkedlistTambahMotor.MotorNode current = garasi.Head;
-            LinkedlistTambahMotor.MotorNode previous = null;
+            LinkedlistMotor.MotorNode current = garasi.Head;
+            LinkedlistMotor.MotorNode previous = null;
 
             Console.WriteLine("\n============== Sewa Motor ==============");
             Console.WriteLine("Masukkan merk motor yang ingin disewa : ");

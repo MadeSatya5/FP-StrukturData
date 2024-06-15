@@ -24,6 +24,7 @@ namespace FP
     {
         private HashTableEntry[] akun;
         private int size = 100;
+        private int count;
 
         public Hash()
         {
@@ -85,5 +86,62 @@ namespace FP
             return akun;
         }
 
+        public bool Remove(string username)
+        {
+            int index = GetHash(username);
+            int originalIndex = index;
+
+            while (akun[index] != null)
+            {
+                if (akun[index].Username == username)
+                {
+                    akun[index] = null;
+                    count--;
+                    Rehash(index);
+                    return true;
+                }
+                index = (index + 1) % size;
+                if (index == originalIndex)
+                {
+                    break;
+                }
+            }
+            return false;
+        }
+
+        private void Rehash(int startIndex)
+        {
+            int index = (startIndex + 1) % size;
+            while (akun[index] != null)
+            {
+                HashTableEntry entry = akun[index];
+                akun[index] = null;
+                count--;
+                CekDaftar(entry.Username, entry.Password); // Meng-insert entry
+                index = (index + 1) % size;
+            }
+        }
+
+        private void Resize()
+        {
+            int newSize = size * 2;
+            HashTableEntry[] newAkun = new HashTableEntry[newSize];
+
+            foreach (var entry in akun)
+            {
+                if (entry != null)
+                {
+                    int index = GetHash(entry.Username);
+                    while (newAkun[index] != null)
+                    {
+                        index = (index + 1) % newSize;
+                    }
+                    newAkun[index] = entry;
+                }
+            }
+
+            akun = newAkun;
+            size = newSize;
+        }
     }
 }
