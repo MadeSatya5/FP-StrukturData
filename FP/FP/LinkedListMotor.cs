@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FP
 {
-    public class LinkedlistTambahMotor
+    public class LinkedlistMotor
     {
         public class Motor
         {

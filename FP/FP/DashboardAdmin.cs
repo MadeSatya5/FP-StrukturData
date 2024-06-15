@@ -7,12 +7,14 @@ namespace FP
     public class DashboardAdmin
     {
         private Hash hash;
-        public LinkedlistTambahMotor.Garasi garasi;
+        public LinkedlistMotor.Garasi garasi;
+        public LinkedlistMotorTersewa.Tersewa tersewa;
 
-        public DashboardAdmin(Hash hash, LinkedlistTambahMotor.Garasi garasi)
+        public DashboardAdmin(Hash hash, LinkedlistMotor.Garasi garasi, LinkedlistMotorTersewa.Tersewa tersewa)
         {
             this.hash = hash;
             this.garasi = garasi;
+            this.tersewa = tersewa;
         }
 
         // Menampilkan akun-akun pelanggan yang terdaftar (fitur Admin)
@@ -45,10 +47,27 @@ namespace FP
 
         }
 
+        //Menghapus akun yang terdaftar
+        public void HapusAkun()
+        {
+            Console.Write("Masukkan Username yang ingin dihapus: ");
+            string username = Console.ReadLine();
+
+            if (hash.Remove(username))
+            {
+                Console.WriteLine("Akun berhasil dihapus!");
+            }
+            else
+            {
+                Console.WriteLine("Akun tidak ditemukan!");
+            }
+            TampilkanMenuAdmin();
+        }
+
         // Menampilkan Motor (fitur admin)
         public void TampilkanMotor()
         {
-            LinkedlistTambahMotor.MotorNode current = garasi.Head;
+            LinkedlistMotor.MotorNode current = garasi.Head;
             Console.Write("\n===== Daftar Motor =====");
             string hasil = "";
             if (current == null)
@@ -78,11 +97,56 @@ namespace FP
             Console.Write("Masukkan Harga Sewa: ");
             double harga = Convert.ToDouble(Console.ReadLine());
 
-            LinkedlistTambahMotor.Motor motor = new LinkedlistTambahMotor.Motor(merk, nomorPolisi, harga);
+            LinkedlistMotor.Motor motor = new LinkedlistMotor.Motor(merk, nomorPolisi, harga);
             garasi.TambahMotor(motor);
 
             Console.WriteLine("\nMotor berhasil ditambahkan ke garasi!!\n");
             TampilkanMenuAdmin();
+        }
+
+        // Menambahkan Motor yang Tersewa (fitur admin)
+        public void TambahkanMotorTersewa()
+        {
+
+            Console.Write("Masukkan Nama/Username Penyewa: ");
+            string namaPenyewa = Console.ReadLine();
+            Console.Write("Masukkan Merk Motor: ");
+            string merk = Console.ReadLine();
+            Console.Write("Masukkan Nomor Polisi: ");
+            string nomorPolisi = Console.ReadLine();
+            Console.Write("Masukkan Tanggal Awal Sewa [Ex : 11Nov2024] : ");
+            string tanggalAwalSewa = Console.ReadLine();
+            Console.Write("Masukkan Tanggal Akhir Sewa [Ex : 5Jan2024]: ");
+            string tanggalAkhirSewa = Console.ReadLine();
+
+            LinkedlistMotorTersewa.MotorTersewa motorTersewa = new LinkedlistMotorTersewa.MotorTersewa(merk, nomorPolisi, namaPenyewa, tanggalAwalSewa, tanggalAkhirSewa);
+            tersewa.TambahMotorTersewa(motorTersewa);
+
+            Console.WriteLine("\nMotor yang akan disewakan berhasil didata!!\n");
+            TampilkanMenuAdmin();
+        }
+
+        // Menampilkan Motor (fitur admin)
+        public void TampilkanMotorTersewa()
+        {
+            LinkedlistMotorTersewa.MotorTersewaNode current = tersewa.Head;
+            Console.Write("\n===== Riwayat Motor yang Tersewa =====");
+            string hasil = "";
+            if (current == null)
+            {
+                Console.WriteLine("\nTidak ada motor yang tersewa!!\n");
+                TampilkanMenuAdmin();
+            }
+            else
+            {
+                while (current != null)
+                {
+                    hasil += $"Nama/Usename Penyewa : {current.Data.NamaPenyewa}\nMerk : {current.Data.Merk}\nNomor Polisi : {current.Data.NomorPolisi}\nTanggal Awal Sewa : {current.Data.TanggalAwalSewa}\nTanggal Akhir Sewa : {current.Data.TanggalAkhirSewa}\n\n";
+                    current = current.Next;
+                }
+                Console.WriteLine("\n" + hasil);
+                TampilkanMenuAdmin();
+            }
         }
 
         public void TampilkanMenuAdmin()
@@ -93,9 +157,10 @@ namespace FP
             Console.WriteLine("3. Lihat Daftar Motor");
             Console.WriteLine("4. Tambahkan Motor");
             Console.WriteLine("5. Kembalikan Motor");
-            Console.WriteLine("6. Lihat Motor Yang Dipinjam");
-            Console.WriteLine("7. Keluar");
-            Console.Write("Masukan Pilihan [1/2/3/4/5/6/7] : ");
+            Console.WriteLine("6. Data Motor yang akan Disewa");
+            Console.WriteLine("7. Lihat Riwayat Motor Yang Tersewa");
+            Console.WriteLine("8. Keluar");
+            Console.Write("Masukan Pilihan [1/2/3/4/5/6/7/8] : ");
             string pilihan = Console.ReadLine();
 
             if (pilihan == "1")
@@ -103,19 +168,31 @@ namespace FP
                 TampilAkunAdmin();
                 TampilkanMenuAdmin();
             }
-            else if(pilihan  == "2")
+            else if (pilihan == "2")
             {
-                Console.WriteLine("p");
+                HapusAkun();
             }
-            else if(pilihan == "3") 
+            else if (pilihan == "3")
             {
                 TampilkanMotor();
             }
-            else if(pilihan == "4")
+            else if (pilihan == "4")
             {
                 TambahkanMotor();
             }
-            else if(pilihan == "7")
+            else if (pilihan == "5")
+            {
+                TambahkanMotor();
+            }
+            else if (pilihan == "6")
+            {
+                TambahkanMotorTersewa();
+            }
+            else if (pilihan == "7")
+            {
+                TampilkanMotorTersewa();
+            }
+            else if (pilihan == "8")
             {
                 DashboardAwal.Masuk();
             }
