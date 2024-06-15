@@ -7,12 +7,12 @@ namespace FP
     public class DashboardAdmin
     {
         private Hash hash;
-        private LinkedlistTambahMotor.Garasi garasi;
+        public LinkedlistTambahMotor.Garasi garasi;
 
-        public DashboardAdmin(Hash hash)
+        public DashboardAdmin(Hash hash, LinkedlistTambahMotor.Garasi garasi)
         {
             this.hash = hash;
-            this.garasi = new LinkedlistTambahMotor.Garasi();
+            this.garasi = garasi;
         }
 
         // Menampilkan akun-akun pelanggan yang terdaftar (fitur Admin)
@@ -44,18 +44,28 @@ namespace FP
             }
 
         }
+
+        // Menampilkan Motor (fitur admin)
         public void TampilkanMotor()
         {
             LinkedlistTambahMotor.MotorNode current = garasi.Head;
+            Console.Write("\n===== Daftar Motor =====");
             string hasil = "";
-
-            while (current != null)
+            if (current == null)
             {
-                hasil += $"Merk : {current.Data.Merk}\nNomor Polisi : {current.Data.NomorPolisi}\nHarga : {current.Data.Harga}\n";
-                current = current.Next;
+                Console.WriteLine("\nMotor di Garasi Kosong!!\n");
+                TampilkanMenuAdmin();
             }
-            Console.WriteLine(hasil);
-            TampilkanMenuAdmin();
+            else
+            {
+                while (current != null)
+                {
+                    hasil += $"Merk : {current.Data.Merk}\nNomor Polisi : {current.Data.NomorPolisi}\nHarga : {current.Data.Harga}\n";
+                    current = current.Next;
+                }
+                Console.WriteLine("\n" + hasil);
+                TampilkanMenuAdmin();
+            }
         }
 
         // Menambahkan Motor (fitur admin)
@@ -71,7 +81,7 @@ namespace FP
             LinkedlistTambahMotor.Motor motor = new LinkedlistTambahMotor.Motor(merk, nomorPolisi, harga);
             garasi.TambahMotor(motor);
 
-            Console.WriteLine("Motor berhasil ditambahkan ke garasi.\n");
+            Console.WriteLine("\nMotor berhasil ditambahkan ke garasi!!\n");
             TampilkanMenuAdmin();
         }
 
@@ -104,6 +114,10 @@ namespace FP
             else if(pilihan == "4")
             {
                 TambahkanMotor();
+            }
+            else if(pilihan == "7")
+            {
+                DashboardAwal.Masuk();
             }
         }
 

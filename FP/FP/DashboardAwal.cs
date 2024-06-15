@@ -10,10 +10,12 @@ namespace FP
     public class DashboardAwal
     {
         public static Hash akun = new Hash();
-        public static DashboardAdmin da = new DashboardAdmin(akun);
+        public static LinkedlistTambahMotor.Garasi garasi = new LinkedlistTambahMotor.Garasi();
+        public static DashboardAdmin da = new DashboardAdmin(akun, garasi);
+        public static DashboardPelanggan dp = new DashboardPelanggan(garasi);
         public static void Daftar()
         {
-            Console.WriteLine("==== Menu Daftar ====");
+            Console.WriteLine("\n==== Menu Daftar ====");
             Console.WriteLine("Masukkan Username : ");
             string Username = Console.ReadLine();
             Console.WriteLine("Masukkan Password : ");
@@ -21,17 +23,17 @@ namespace FP
 
             if (akun.CekDaftar(Username, Password))
             {
-                Console.WriteLine("Akun Berhasil Terdaftar!!");
+                Console.WriteLine("\nAkun Berhasil Terdaftar!!\n");
             }
             else
             {
-                Console.WriteLine("Akun Gagal Terdaftar!!");
+                Console.WriteLine("\nAkun Gagal Terdaftar!!\n");
             }
             Program.Main();
         }
         public static void Masuk()
         {
-            Console.WriteLine("Masuk sebagai :");
+            Console.WriteLine("\nMasuk sebagai :");
             Console.WriteLine("1. Pelanggan");
             Console.WriteLine("2. Admin");
             Console.WriteLine("3. Keluar");
@@ -46,17 +48,17 @@ namespace FP
                 
                 if(akun.searchMasukPelanggan(Username, Password))
                 {
-                    Console.WriteLine("Berhasil Masuk!!");
-                    DashboardPelanggan.MainMenu();
+                    Console.WriteLine("\nBerhasil Masuk!!\n");
+                    dp.TampilkanMenuPelanggan();
                 }
                 else
                 {
-                    Console.WriteLine("Gagal Masuk!! Username atau Password salah!!");
+                    Console.WriteLine("\nGagal Masuk!! Username atau Password salah!!\n");
                     Masuk();
                 }
 
             }
-            if(pilihan == "2")
+            else if(pilihan == "2")
             {
                 Console.WriteLine("Masukkan Username :");
                 string UsernameAdmin = Console.ReadLine();
@@ -64,12 +66,18 @@ namespace FP
                 string PasswordAdmin = Console.ReadLine();
                 if (UsernameAdmin == "user" && PasswordAdmin == "user")
                 {
+                    Console.WriteLine("\nBerhasil Masuk!!\n");
                     da.TampilkanMenuAdmin();
                 }
                 else
                 {
-                    Console.WriteLine(" Username / Password salah");
+                    Console.WriteLine("\nGagal Masuk!! Username atau Password salah!!\n");
+                    Masuk();
                 }
+            }
+            else if(pilihan == "3")
+            {
+                Program.Main();
             }
         }
     }

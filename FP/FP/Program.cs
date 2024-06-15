@@ -30,11 +30,12 @@ namespace FP
             }
             else if (pilihan == "3")
             {
-                Console.WriteLine("Sampai Bertemu Kembali!");
+                Console.WriteLine("\nSampai Bertemu Kembali!!\n");
             }
             else
             {
-                Console.WriteLine("Input Tidak Valid!!!");
+                Console.WriteLine("\nInput Tidak Valid!!\n");
+                Main();
             }
         }
     }
