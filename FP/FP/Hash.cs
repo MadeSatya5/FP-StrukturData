@@ -116,7 +116,6 @@ namespace FP
                 HashTableEntry entry = akun[index];
                 akun[index] = null;
                 CekDaftar(entry.Username, entry.Password); // Meng-insert entry
-                index = (index + 1) % size;
             }
         }
     }

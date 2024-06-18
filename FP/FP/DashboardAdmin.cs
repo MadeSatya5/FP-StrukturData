@@ -55,11 +55,11 @@ namespace FP
 
             if (hash.Remove(username))
             {
-                Console.WriteLine("Akun berhasil dihapus!");
+                Console.WriteLine("\nAkun berhasil dihapus!\n");
             }
             else
             {
-                Console.WriteLine("Akun tidak ditemukan!");
+                Console.WriteLine("\nAkun tidak ditemukan!\n");
             }
             TampilkanMenuAdmin();
         }
