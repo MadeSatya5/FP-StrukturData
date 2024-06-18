@@ -24,7 +24,7 @@ namespace FP
     {
         private HashTableEntry[] akun;
         private int size = 100;
-        private int count;
+        //private int count;
 
         public Hash()
         {
@@ -49,7 +49,7 @@ namespace FP
 
             while (akun[index] != null && akun[index].Username != username)
             {
-                index = (index + 1) % size;
+                index = (index + 1) % size; // linear probing
                 if (index == originalIndex)
                 {
                     return false;
@@ -65,7 +65,7 @@ namespace FP
 
         public bool searchMasukPelanggan(string username, string password)
         {
-            int i = 0;
+            int i = 0; //linear search
 
             while (i < size)
             {
@@ -96,7 +96,6 @@ namespace FP
                 if (akun[index].Username == username)
                 {
                     akun[index] = null;
-                    count--;
                     Rehash(index);
                     return true;
                 }
@@ -116,32 +115,9 @@ namespace FP
             {
                 HashTableEntry entry = akun[index];
                 akun[index] = null;
-                count--;
                 CekDaftar(entry.Username, entry.Password); // Meng-insert entry
                 index = (index + 1) % size;
             }
-        }
-
-        private void Resize()
-        {
-            int newSize = size * 2;
-            HashTableEntry[] newAkun = new HashTableEntry[newSize];
-
-            foreach (var entry in akun)
-            {
-                if (entry != null)
-                {
-                    int index = GetHash(entry.Username);
-                    while (newAkun[index] != null)
-                    {
-                        index = (index + 1) % newSize;
-                    }
-                    newAkun[index] = entry;
-                }
-            }
-
-            akun = newAkun;
-            size = newSize;
         }
     }
 }

@@ -37,6 +37,7 @@ namespace FP
             }
         }
 
+        // Sewa Motor (fitur Pelanggan)
         public void SewaMotor()
         {
             LinkedlistMotor.MotorNode current = garasi.Head;
