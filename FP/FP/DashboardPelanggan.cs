@@ -12,7 +12,7 @@ namespace FP
 
         public DashboardPelanggan(LinkedlistMotor.Garasi garasi)
         {
-            this.garasi = garasi;
+            this.garasi = garasi; // menggunakan objek garasi yang sama di lain kelas
         }
         // Lihat Daftar Motor (fitur pelanggan)
         public void LihatDaftarMotor()

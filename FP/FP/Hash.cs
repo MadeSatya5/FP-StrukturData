@@ -96,7 +96,7 @@ namespace FP
                 if (akun[index].Username == username)
                 {
                     akun[index] = null;
-                    Rehash(index);
+                    Rehash(index); // melakukan perbaikan posisi indeks yang terkena linear probing
                     return true;
                 }
                 index = (index + 1) % size;
@@ -116,6 +116,7 @@ namespace FP
                 HashTableEntry entry = akun[index];
                 akun[index] = null;
                 CekDaftar(entry.Username, entry.Password); // Meng-insert entry
+                index = (index + 1) % size;
             }
         }
     }
